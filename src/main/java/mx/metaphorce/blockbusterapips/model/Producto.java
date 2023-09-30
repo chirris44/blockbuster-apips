@@ -1,5 +1,4 @@
 package mx.metaphorce.blockbusterapips.model;
-
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,11 +18,17 @@ import lombok.ToString;
 @ToString
 @Data
 @Entity
-@Table(name = "actores")
-public class Actor implements Serializable{
+@Table(name = "producto")
+public class Producto implements Serializable{
     @Id
-    @Column(name = "id")
-    private int id;
-    @Column(name = "nombre")
-    private String nombre;
+    @Column(name = "producto_id")
+    private int producto_id;
+    @Column(name = "vendedor_id")
+    private int vendedor_id;
+    @Column(name = "categoria_id")
+    private int categoria_id;
+    @Column(name = "precio")
+    private float precio;
+    @Column(name = "descripcion")
+    private String descripcion;
 }
